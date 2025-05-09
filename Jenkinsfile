@@ -7,12 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Clone Repo') {
-            steps {
-                git 'https://github.com/your-username/api-integration-tests.git'
-            }
-        }
-
         stage('Install Newman') {
             steps {
                 sh 'npm install -g newman'
@@ -38,4 +32,3 @@ pipeline {
         }
     }
 }
-
